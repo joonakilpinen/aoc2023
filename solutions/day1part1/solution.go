@@ -21,8 +21,7 @@ func (Solver) Solve(input string) string {
 	defer close(respChan)
 	var res int
 	for range lines {
-		addition := <-respChan
-		res += addition
+		res += <-respChan
 	}
 	return strconv.Itoa(res)
 }

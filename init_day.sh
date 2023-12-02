@@ -35,7 +35,7 @@ done > "inputs/day${1}/test.txt"
 
 read -p "Expected test result? "
 
-cat <<EOF >> aoc2022_test.go
+cat <<EOF >> aoc2023_test.go
 
 func TestDay${1}Part1SolveTest(t *testing.T) {
 	Assert(t, &day${1}part1.Solver{}, GetTestInput(${1}), "${REPLY}")
