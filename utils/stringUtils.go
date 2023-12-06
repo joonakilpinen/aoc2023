@@ -23,3 +23,14 @@ func ToIntSlice(input string, separator string) []int {
 	}
 	return ret
 }
+
+func RemoveWhitespace(input string) string {
+	var ret string
+	for _, str := range strings.Split(input, " ") {
+		if str == "" {
+			continue
+		}
+		ret += str
+	}
+	return ret
+}
