@@ -16,6 +16,10 @@ import (
 	"aoc2023/solutions/day6part2"
 	"aoc2023/solutions/day7part1"
 	"aoc2023/solutions/day7part2"
+	"aoc2023/solutions/day8part1"
+	"aoc2023/solutions/day8part2"
+	"aoc2023/solutions/day9part1"
+	"aoc2023/solutions/day9part2"
 	"github.com/stretchr/testify/assert"
 	"log"
 	"testing"
@@ -150,4 +154,47 @@ func TestDay7Part2SolveTest(t *testing.T) {
 
 func TestDay7Part2Solve(t *testing.T) {
 	Solve(&day7part2.Solver{}, GetInput(7))
+}
+
+func TestDay8Part1SolveTest(t *testing.T) {
+	Assert(t, &day8part1.Solver{}, GetTestInput(8), "2")
+}
+
+func TestDay8Part1Solve(t *testing.T) {
+	Solve(&day8part1.Solver{}, GetInput(8))
+}
+
+func TestDay8Part2SolveTest(t *testing.T) {
+	input := `LR
+
+11A = (11B, XXX)
+11B = (XXX, 11Z)
+11Z = (11B, XXX)
+22A = (22B, XXX)
+22B = (22C, 22C)
+22C = (22Z, 22Z)
+22Z = (22B, 22B)
+XXX = (XXX, XXX)
+`
+	Assert(t, &day8part2.Solver{}, input, "6")
+}
+
+func TestDay8Part2Solve(t *testing.T) {
+	Solve(&day8part2.Solver{}, GetInput(8))
+}
+
+func TestDay9Part1SolveTest(t *testing.T) {
+	Assert(t, &day9part1.Solver{}, GetTestInput(9), "114")
+}
+
+func TestDay9Part1Solve(t *testing.T) {
+	Solve(&day9part1.Solver{}, GetInput(9))
+}
+
+func TestDay9Part2SolveTest(t *testing.T) {
+	Assert(t, &day9part2.Solver{}, GetTestInput(9), "2")
+}
+
+func TestDay9Part2Solve(t *testing.T) {
+	Solve(&day9part2.Solver{}, GetInput(9))
 }
